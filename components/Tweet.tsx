@@ -6,16 +6,16 @@ interface Props {
     tweet: Tweet[]
 }
 function Tweet({ tweet }: Props) {
-    const [comments, setComments] = useState<Comment[]>([])
-    const refreshComment = async () => {
-        const comments :  Comment[] = await fetch(tweet._id)
-        setComments(comments)
+    // const [comments, setComments] = useState<Comment[]>([])
+    // const refreshComment = async () => {
+    //     const comments :  Comment[] = await fetch(tweet._id)
+    //     setComments(comments)
 
-    }
-    useEffect(() => {
-        refreshComment()
-    }, [])
-    console.log(":::::::::::::  Tweet.tsx  ::::::::::::::", comments)
+    // }
+    // useEffect(() => {
+    //     refreshComment()
+    // }, [])
+    // console.log(":::::::::::::  Tweet.tsx  ::::::::::::::", comments)
     return (
         <div className='flex flex-col space-x-3 border-y p-5 border-gray-100'>
             <div className='flex space-x-3'>
